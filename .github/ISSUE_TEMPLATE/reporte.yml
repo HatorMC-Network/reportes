@@ -1,0 +1,116 @@
+name: Reportar un bug
+description: Algo no funciona como debería en el servidor. No hace falta que sepas de qué plugin es.
+title: "[Reporte] "
+labels: ["triage", "área:sin-determinar"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Antes de empezar
+
+        🚨 **Si el bug permite duplicar ítems, romper la economía, saltarse protecciones o tirar el servidor, NO lo reportes acá.**
+        Este repositorio es público: cualquiera puede leerlo. Mandámelo por Discord al privado.
+
+        Para todo lo demás, completá lo de abajo. No te preocupes por saber qué plugin es — de eso me encargo yo.
+
+  - type: textarea
+    id: que-paso
+    attributes:
+      label: ¿Qué pasó?
+      description: Contalo como se lo contarías a alguien por Discord. Sin tecnicismos.
+      placeholder: |
+        Ejemplo: Cuando un jugador usa una perla de ender parado arriba del spawn, aparece adentro de la zona protegida y puede romper bloques.
+    validations:
+      required: true
+
+  - type: textarea
+    id: que-deberia-pasar
+    attributes:
+      label: ¿Qué tendría que haber pasado?
+      description: Esto es importante. A veces lo que parece un bug es en realidad cómo está configurado.
+      placeholder: |
+        Ejemplo: La perla tendría que rebotar o cancelarse, y el jugador quedarse afuera de la zona.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: donde
+    attributes:
+      label: ¿Dónde pasó?
+      options:
+        - Survival
+        - Lobby
+        - Practice
+        - Builder
+        - En varios / En toda la red
+        - No sé
+    validations:
+      required: true
+
+  - type: textarea
+    id: pasos
+    attributes:
+      label: ¿Cómo lo reproduzco?
+      description: Los pasos exactos para que me vuelva a pasar a mí. Si no sabés cómo repetirlo, escribí "no sé cómo repetirlo".
+      placeholder: |
+        1. Pararse arriba del spawn
+        2. Tirar una perla de ender hacia el centro
+        3. Al caer, intentar romper un bloque
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frecuencia
+    attributes:
+      label: ¿Pasa siempre?
+      options:
+        - Siempre que lo intento
+        - A veces sí, a veces no
+        - Pasó una sola vez
+    validations:
+      required: true
+
+  - type: input
+    id: cuando
+    attributes:
+      label: ¿Cuándo pasó? (fecha y hora aproximada)
+      description: Aunque sea aproximado. Me sirve para cruzarlo con los logs y con CoreProtect.
+      placeholder: "17/09 cerca de las 21:30"
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidencia
+    attributes:
+      label: Video o capturas
+      description: Podés pegar un link (YouTube, Medal, Streamable) o arrastrar las imágenes/videos directo acá.
+      placeholder: "Arrastrá el archivo o pegá el link"
+    validations:
+      required: false
+
+  - type: input
+    id: jugadores
+    attributes:
+      label: ¿A qué jugador le pasó?
+      description: Nick exacto. Si fueron varios, separalos con coma.
+      placeholder: "Hator, Koyere"
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Algo más que quieras agregar
+      description: Cualquier cosa que te parezca relevante y no haya entrado arriba.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmacion
+    attributes:
+      label: Antes de enviar
+      options:
+        - label: Busqué en los issues abiertos y no encontré este mismo reporte
+          required: true
+        - label: Confirmo que esto NO es un dupe, exploit de economía ni una forma de saltarse protecciones (esos van por Discord privado)
+          required: true
