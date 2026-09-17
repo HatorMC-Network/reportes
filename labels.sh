@@ -20,10 +20,16 @@ set -euo pipefail
 # EDITAR: tus repos. El primero es el inbox, el resto los plugins.
 # ─────────────────────────────────────────────────────────────
 REPOS=(
-  "HatorMC/reportes"
-  "HatorMC/lightly"
-  # "HatorMC/otro-plugin"
-  # "HatorMC/otro-plugin-mas"
+  # Inbox
+  "HatorMC-Network/reportes"
+
+  # Plugins propios
+  "HatorMC-Network/Lightly"          # privado
+  "HatorMC-Network/Evtor"            # privado
+  "HatorMC-Network/NetworkStaff"     # privado
+  "HatorMC-Network/Practice-Hator"   # privado
+  "HatorMC-Network/commandblocker"   # privado
+  "HatorMC-Network/UltraCosmetics"   # PÚBLICO
 )
 
 DRY_RUN=false

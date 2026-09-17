@@ -1,13 +1,13 @@
 blank_issues_enabled: false
-contact_links:
-  - name: 🚨 Reportar un exploit, dupe o vulnerabilidad
-    url: https://discord.gg/CAMBIAR-POR-TU-INVITE
-    about: Este repositorio es PÚBLICO. Los exploits, dupes y bypasses de protección se reportan SOLO por Discord privado. Nunca acá.
 
-  - name: 💬 Soporte a jugadores / dudas generales
-    url: https://discord.gg/CAMBIAR-POR-TU-INVITE
-    about: "'No puedo entrar', 'perdí un ítem', 'me banearon': eso va al Discord, no acá."
-
-  - name: 💡 Sugerencia o idea nueva
-    url: https://discord.gg/CAMBIAR-POR-TU-INVITE
-    about: Este repo es solo para cosas que están rotas. Las ideas van al canal de sugerencias.
+# Sin contact_links a propósito: con un solo template y sin links, GitHub manda
+# al staff directo al formulario sin pasar por la pantalla de selección.
+#
+# Si más adelante querés desviar los exploits a un canal concreto, descomentá
+# esto y pegá el link del canal (click derecho sobre el canal en Discord →
+# "Copiar vínculo"). Ese link abre el canal directo para quien ya está en el server.
+#
+# contact_links:
+#   - name: 🚨 Reportar un exploit, dupe o vulnerabilidad
+#     url: https://discord.com/channels/SERVER_ID/CANAL_ID
+#     about: Este repositorio es PÚBLICO. Los exploits van SOLO por Discord privado.
